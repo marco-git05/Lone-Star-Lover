@@ -1,3 +1,20 @@
-renpy/
-lib/
-update/
+# Ren'Py build outputs
+/game/cache/
+/game/saves/
+/log.txt
+errors.txt
+traceback.txt
+
+# Ren'Py distribution folders (generated when building releases)
+dist/
+tmp/
+progress.txt
+
+# Bytecode / compiled
+*.pyc
+__pycache__/
+
+# Editor / system files
+*.swp
+.DS_Store
+Thumbs.db
