@@ -18,6 +18,9 @@ image bg generic space = "backrounds/bg_generic_space.png"
 image bg inside ship = "backrounds/bg_inside_ship.png"
 image bg space station = "backrounds/bg_space_station.png"
 image bg zephyr house outside = "backrounds/bg_zypher_house_outside.png"
+image bg saloon = "backrounds/bg_saloon.png"
+image bg street night = "backrounds/bg_street_night.png"
+image bg street day = "backrounds/bg_street_day.png"
 
 # The game starts here.
 
