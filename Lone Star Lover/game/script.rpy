@@ -9,6 +9,7 @@ define gui.text_size = 30
 define s = Character("Silas")
 define z = Character("Zephyr")
 define mc = Character("[mcname]")
+define eggs = ""
 
 default s_affection = 0
 default z_affection = 0
@@ -27,7 +28,7 @@ image bg street day = "backrounds/bg_street_day.png"
 label start:
 
     label day_1:
-        scene bg space station with fade
+        scene bg generic space with fade
 
         "{i}Gate A-11... Gate A-11... Ah! I see it now. Finally, I can have some peace far, far away from my office of misery.{/i}"
         "Narrator" "You let out a long yawn."
@@ -170,12 +171,12 @@ label start:
         show zephyr happy open
         z "\"It's free of charge! Knowing that you are somewhere safe for the night is enough for me.\""
 
-
         show zephyr happy closed
         menu:
-            "Oh... Well, thank you! I'll stay for tonight and be up and out of your way tomorrow night then.":
+            z "{cps=5000}\"It's free of charge! Knowing that you are somewhere safe for the night is enough for me.\"{/cps}"
+            "\"Oh... Well, thank you! I'll stay for tonight and be up and out of your way tomorrow night then.\"":
                 pass
-            "Thank you so, so much! I'm glad I won't have to walk in the streets after dark.":
+            "\"Thank you so, so much! I'm glad I won't have to walk in the streets after dark.\"":
                 pass
 
         "Narrator" "Zephyr steps aside to let you in. His home is decorated with colorful, cozy furniture. Warm lighting surrounds you as you walk down the main hallway of the house and find your way to the guest bedroom."
@@ -202,10 +203,11 @@ label start:
 
         show zephyr happy closed
         menu:
+            z "{cps=5000}\"My pleasure. Oh, by the way, how do you like your eggs in the morning?\"{/cps}"
             "Sunny side up.":
-                pass
+                $ eggs = "Sunny side up"
             "Scrambled.":
-                pass
+                $ eggs = "Scrambled"
 
         show zephyr default open
         z "\"Okay, got it. Sleep well, dear.\""
@@ -214,12 +216,15 @@ label start:
 
         "Narrator" "You take some time to enjoy your pastry and milk while scrolling through news about the spaceship crash on Rurigena Terra. After finishing your small meal, you turn off the light and slowly drift into a deep slumber."
 
-        scene bg black with fade
         pause(2.0)
 
         # END DAY 1
 
     label day_2:
+        scene bg day two transition with fade
+        pause(3.0)
+
+        scene bg black with fade
         "Narrator" "Warm sunlight fills your room as you wake up. Your eyes softly flutter open to find something yellow stuck to your forehead."
         "Narrator" "You gently remove it — it's a note that reads: {b}\"Good mornin’ darlin'! Breakfast is waiting for you in the kitchen. - Zephyr\"{/b}"
         "Narrator" "You smile before stretching and getting out of bed."
@@ -230,28 +235,36 @@ label start:
 
 
         show zephyr default open with dissolve
-        z "\"Mornin’, [mcname]! I made you some eggs, toast, and sausage to start the day. Come sit and eat up! Oh, here’s a glass of juice, too.\""
+        z "\"Mornin’, [mcname]! I made you some toast, sausage, and eggs. [eggs], just like you like them. Come sit and eat up! Oh, here’s a glass of juice, too.\""
 
+        show zephyr default closed
         "Narrator" "He sets your plate and a shimmering pink drink in front of you."
 
+        show zephyr default open
         z "\"Now, I reckon this drink is unfamiliar to you. Don’t be afraid of it; it’s made from fresh fruits from my garden! It’s full of vitamins, so it’s real good for you!\""
 
+        show zephyr default closed
         "Narrator" "You smile at him before observing the drink. The juice smells slightly sweet as you put the rim of the cup to your lips and take a sip."
         "Narrator" "Zephyr watches you, fidgeting with his thumbs, while you take in the floral and fruity flavor of the drink."
 
-        z "So… What do you think?"
+        show zephyr default open
+        z "\"So… What do you think?\""
+
+        show zephyr default closed
 
         menu:
-            "I’m not sure if this is my taste…":
-                $ z_affection -= 1
-                show zephyr angry closed
+            z "{cps=5000}\"So… What do you think?\"{/cps}"
+            "\"I’m not sure if this is my taste…\"":
+                show zephyr angry open
                 z "\"Oh! I’m sorry. I do own fruits from other planets, but I figured it’d be nice to show you something from here.\""
-                show zephyr default open
                 z "\"Here, have some water instead.\""
-            "It’s unique, but it reminds me of home.":
-                $ z_affection += 1
+                show zephyr default open
+                z "\"Say, where do you come from?\""
+                show zephyr default closed
+            "\"It’s unique, but it reminds me of home.\"":
                 show zephyr happy open
                 z "\"Oh, really? That reminds me — I’ve been wondering about where you're from.\""
+                show zephyr happy closed
 
 
         mc "\"I come from Earth.\""
@@ -259,38 +272,41 @@ label start:
         show zephyr default open
         z "\"Well, I’ll be! We rarely get Earth folk ‘round here nowadays.\""
 
-
+        show zephyr default closed
         mc "\"Oh? Why is that?\""
 
-
-        show zephyr default closed
+        show zephyr sad open
         z "\"They just don’t appreciate our lifestyle. Our days move quicker here, but our hearts don’t. We don’t rush life. The planet gives us all we need — so we live slow and live well.\""
 
+        show zephyr default closed
         mc "\"Wow… what a shock. Most of my life is practically given to a large screen, so it’s kind of surprising to hear your take on technology.\""
 
-
+        show zephyr default open
         z "\"Hmm, I see. So what do you do on Earth?\""
 
-
+        show zephyr default closed
         mc "\"I mainly work on a communications team for a large business. The pay is great, but the work can be insanely boring most of the time.\""
         mc "\"It’s the reason I took this trip, actually. I thought I’d have a chance to relax and enjoy a beachy scenery, it's what Caeles Terra is known for anyway.\""
         mc "\"But I guess the universe didn’t want me to have that just yet. Instead, I get to be stuck here.\""
 
+        show zephyr sad closed
         "Narrator" "You notice that your mood has fallen flat, and you think Zephyr noticed too, since he stares at you with worry in his eyes. You quickly fix your posture and give a small smile."
 
         menu:
+            "Narrator" "{cps=5000}You notice that your mood has fallen flat, and you think Zephyr noticed too, since he stares at you with worry in his eyes. You quickly fix your posture and give a small smile.{/cps}"
+
             "\"Although it isn’t too bad here, a vacation is still a vacation!\"":
-                pass
+                show zephyr default open
             "\"I don’t mind being here, though. After all, I got to meet you and stay at your lovely farm.\"":
-                $ z_affection += 1
+                show zephyr happy open
 
 
-        show zephyr happy open
         z "\"I’m glad you are enjoying it here, then. Have you had a chance to explore the town a bit?\""
 
-
+        show zephyr default closed
         mc "\"Not really, I was mainly rushing to find the inn. I didn’t get a chance to visit any shops or restaurants.\""
 
+        show zephyr default open
         z "\"Well, I think you should take some time to enjoy the town before your flight is ready. Please be back before sunset, though.\""
 
         hide zephyr with dissolve
@@ -318,48 +334,51 @@ label start:
         "Narrator" "Your gaze finds its way to the bar stand and onto a familiar figure. You chuckle to yourself before getting closer to the man that caught your eye for the second time on this planet." 
         mc "“Silas?”"
 
-        show silas default open with dissolve
+        show silas default closed with dissolve
         "Narrator" "He takes a sip of his drink before turning around to face you."
 
         menu:
+            "Narrator" "{cps=5000}He takes a sip of his drink before turning around to face you.{/cps}"
             "“Hey Silas! What are you doing here?”":
-                mc "\"Hey Silas! What are you doing here?\""
-                show silas default closed
+                show silas default open
                 s "\"Just here to cool down from the day. Why are you here?\""
+                show silas default closed
                 mc "\"Uhm, well, I was just looking around the town, and I just wanted to take a look at this saloon before I head back to my place of stay before sundown.\""
 
             "“Thanks Silas… I really appreciated your directions…”":
-                mc "\"Thanks Silas… I really appreciated your directions…\""
                 show silas default open
                 s "\"Oh? Well… you're welcome.\""
 
         show silas default open
-        s "\"Oh, did you not stay at the Wrangler Inn last night?\""
-        mc "\"Uh, well I was able to find a very nice farm where I could stay for the night actually, no thanks to you.\""
-        show silas angry closed
+        s "\"...{w=0.5}Did you not stay at the Wrangler Inn last night? I dind't see you there when I went back.\""
+        show silas default closed
+        mc "\"Uh, well I was able to find a very nice farm where I could stay for the night actually~ no thanks to you.\""
+        show silas angry open
         s "\"Whatever. At least I am glad you found somewhere to stay.\""
 
         show silas sad closed
-        s "\"Sorry, I did not mean to sound rude, but do you want to have some fun? We can play darts.\""
+        s "\"Sorry, I did not mean to sound so rude... Do you want to have some fun? We can play darts.\""
+        show silas happy open
         mc "\"Um, sure, I would love to play some games!\""
 
-    
-        "Narrator" "They both start playing darts for a bit. Silas is letting the MC win"
+        hide silas with dissolve
+        "Narrator" "You and Silas start playing darts for a bit.{w=0.5}.{w=0.5}.{w=0.5} Silas is letting the you win"
 
         show silas default open
         s "\"Holy cow, how are you so good at darts?\""
-        mc "\"Back on Earth I played darts with my friends, and I would always beat them when they would say they were better than me.\""
         show silas default closed
+        mc "\"Back on Earth I played darts with my friends, and I would always beat them when they would say they were better than me.\""
+        show silas default open
         s "\"Well, let’s finish up this game with the final dart in my hand, with my eyes closed.\""
-        "Narrator" "throws dart"
-        show silas flustered open
-        "Narrator" "[mcname] starts laughing at his mistake. Silas gets flustered from his horrible miss."
-        "Narrator" "[mcname] goes to pick up the dart that Silas had missed from his final shot. And tries to return the dart to Silas."
+        show silas flustered closed
+        "Narrator" "You can't help but laugh at his mistake and Silas gets flustered from his horrible miss."
+        "Narrator" "You go to pick up the dart that Silas had missed from his final shot and try to return it to him."
 
         show silas default open
         s "\"You can keep the dart as a trophy of your win in beating me at darts.\""
+        show silas deafult closed
         mc "\"Well, thank you for this trophy, I will cherish this memory with it.\""
-        show silas default closed
+        show silas happy closed
         s "\"Hey, now that we're done with darts, do you want to go and have some more fun in exploring the town\""
         "Narrator" "[mcname] gets flustered from Silas’s invitation to explore the town with him for her to explore."
         mc "\"Yeah! I would love to do that!\""
