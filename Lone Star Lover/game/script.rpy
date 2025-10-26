@@ -60,7 +60,11 @@ label start:
         "Intercom" "\"OH, BEFORE I FORGET... \""
         "Intercom" "\"WELCOME TO RURIGENA TERRA!\""
 
+        stop music
+
         scene bg space station with fade
+
+        play music "audio/General Day.wav"
 
         "{i}Oh my... I should've expected to run into a stressful situation while going on vacation. God forbid I try to relax!{/i}"
         "Narrator" "You continue pushing through luggage before pulling the suitcase with your name out of the large pile."
@@ -77,6 +81,8 @@ label start:
         "Woman" "\"Shhh! Lower your voice, other people might hear us! Just lead the way, there's no need to go over the directions right this second.\"" with vpunch
         "{i}Does it really only take three streets to get to {b}The Wrangler Inn{/b}? I do not know the last street, but maybe I can figure it out along the way. I should start leaving before anyone else does!{/i}"
 
+        stop music
+
         scene bg street day with fade
 
         "Narrator" "You take your luggage and quickly walk away from the ship, keeping the street names in your mind. You find {b}Calico Street{/b} and hurry down the road as you start to run out of breath from the long walk."
@@ -88,6 +94,8 @@ label start:
         mc "\"What in the world?\""
         
         show silas angry closed with dissolve
+        play music "audio/Romantic.wav"
+
         "Narrator" "You turn over to your back before your eyes flutter open to look above you. A tall figure adorned in dark clothes stares down at you with an arm stretched out. You grab on and stand up before dusting yourself off."
         mc "{cps=35}\"I'm so sorry!\"{/cps}{nw}"
         mc "{cps=35}\"I didn't plan to be on this planet!\"{/cps}{nw}"
@@ -121,6 +129,7 @@ label start:
         s "\"Well, [mcname], enjoy your stay.\""
         show silas default closed
         "You let out a small smile before heading off on your way to The Wrangler Inn. Silas disappears in the opposite direction."
+        stop music
         hide silas default closed with easeoutleft
         "{i}What a strange encounter... That Silas... He seemed angry with me, yet caring at the same time?{/i}"
         "{i}This road seems awfully lonely. I sure hope he gave me the correct directions! Maybe the inn is just in an isolated area?... I really hope that is the case.{/i}"
