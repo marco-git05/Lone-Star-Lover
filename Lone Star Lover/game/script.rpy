@@ -362,7 +362,7 @@ label start:
         mc "\"Um, sure, I would love to play some games!\""
 
         hide silas with dissolve
-        "Narrator" "You and Silas start playing darts for a bit.{w=0.5}.{w=0.5}.{w=0.5} Silas is letting the you win"
+        "Narrator" "You and Silas start playing darts for a bit.{w=0.5}.{w=0.5}.{w=0.5} Silas is letting the you win."
 
         show silas default open
         s "\"Holy cow, how are you so good at darts?\""
@@ -376,18 +376,19 @@ label start:
 
         show silas default open
         s "\"You can keep the dart as a trophy of your win in beating me at darts.\""
-        show silas deafult closed
+        show silas default closed
         mc "\"Well, thank you for this trophy, I will cherish this memory with it.\""
-        show silas happy closed
+        show silas happy open
         s "\"Hey, now that we're done with darts, do you want to go and have some more fun in exploring the town\""
-        "Narrator" "[mcname] gets flustered from Silas’s invitation to explore the town with him for her to explore."
+        "Narrator" "You get a warm feeling in your chest at the thought of exploring around town with Silas."
         mc "\"Yeah! I would love to do that!\""
 
         scene bg street night with fade
 
         show silas default open
-        "Narrator" "As Silas and the MC are exploring the town, Silas slowly warms up to MC throughout the exploration."
+        "Narrator" "As you and Silas are exploring the town, he slowly warms up to you."
 
+        show silas happy open
         s "\"That was really fun, I am glad that I was able to show you the town before you continue on your way.\""
 
 
