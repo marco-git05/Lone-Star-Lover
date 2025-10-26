@@ -392,3 +392,44 @@ label start:
 
 
     return
+
+label zephyr:
+    
+
+
+label silas:
+    scene bg street day with fade
+
+    "Narrator" "You tuck your phone back in your pocket before making the decision to head back into town." 
+    "Narrator" "As you make your way through the rows of quaint buildings, you see the hotel Silas mentioned previously." 
+    "Narrator" "As you walk up to the lobby, you spot Silas sitting on a beat up sofa looking a bit dejected."
+    mc "\"Silas?\""
+
+    "Narrator" "Turning to look towards the source of the noise, his face lights up at the sight of you."
+
+    s "\"[mcname]! You came. Did stepping out for a minute clear your head and show you the right choice? I was beginning to think that oaf had won your heart. I’m glad you made the decision to join me.\""
+
+    "Narrator" "You roll your eyes at Silas’s comment, heading over to where he is sitting"
+
+    mc "\"Well I wouldn't call him that, but I did come to the realization that I am meant to travel.\"" 
+    mc "\"While staying here for a bit would have been nice as the air is the cleanest I’ve found so far in my travels, I couldn't imagine myself leaving my life behind for what this planet holds.\""
+
+    "Narrator" "Standing to meet you, Silas takes your hand and begins leading you to where you assume his room is located."
+    s "\"Well I’m glad you came to that decision on your own. While I would love to travel with you, I would never want to force you into something that you know you wouldn’t like.\""
+
+    "Narrator" "After a brief minute of walking, you arrive at the entrance to one of the units. Number 203. As Silas unlocks the door and steps in, you can’t help but smile at him with a fond look on your face."
+    "Narrator" "As you settle into the hotel unit, Silus makes an effort to ensure you are comfortable in his temporary space. With a warm smile on his face, he settles beside you."
+
+    s "\"Alright kitten, get a restful night’s sleep and we’ll head out early tomorrow morning, so that we can ensure that we don’t miss our flight out of here.\""
+
+    # DAY 3
+
+    "Narrator" "As the sun rises over the horizon with warm hues of pink and green. You and Silas awake to the sound of hotel goers meandering about the walkways outside the units and towns-folk bustling about the dirt paved roads."
+
+    "Narrator" "Though the both of you would like a slow morning walking up, enjoying each other's company, you know that is not an option." 
+    "Narrator" "As you quickly gather your belongings and head out the door with Silas by your side, you can’t help but smile up at the bright sky."
+    "Narrator" "Entering the spaceport, you see the newly repaired ship waiting at the dock, new side paneling gleaming in the light."
+    "Narrator" "As you and Silas begin boarding the ship, he takes your hand in his, glancing over with a cheery smile on his face. As you look forward to the horizon, you can’t help but wonder what your future has in store."
+
+    # ENDING 2
+    return
