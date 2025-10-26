@@ -27,7 +27,7 @@ image bg street day = "backrounds/bg_street_day.png"
 label start:
 
     label day_1:
-        scene bg space station with fade
+        scene bg generic space with fade
 
         "{i}Gate A-11... Gate A-11... Ah! I see it now. Finally, I can have some peace far, far away from my office of misery.{/i}"
         "Narrator" "You let out a long yawn."
