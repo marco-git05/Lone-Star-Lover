@@ -208,6 +208,8 @@ screen choice(items):
     style_prefix "choice"
 
     vbox:
+        yalign 0.4
+
         for i in items:
             textbutton i.caption action i.action
 
