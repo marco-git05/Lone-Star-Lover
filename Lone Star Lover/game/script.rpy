@@ -394,8 +394,67 @@ label start:
     return
 
 label zephyr:
-    
+    "Narrator" "You tuck your phone back into your pocket before heading inside Zephyr’s home. You make your way towards the kitchen and find Zephyr cleaning up the last bits of the large dinner he prepared for y’all."
+    mc "\"Hey, uhm… Zephyr?\""
 
+    "Narrator" "His head whips around to face you and gives you a smile."
+    z "\"Oh hey there, darlin’! I’m glad to see ya came back. Ya got enough time to clear your head out there?\""
+
+    mc "\"Yes, I did, thank you for giving me my space.\""
+
+    z "\"Of course, dear. I’m so sorry for earlier, I don’t know what got into me back there. I guess I just don’t trust people like that Silas… especially when it comes to you, [mcname]. But that doesn’t mean I should lose my temper in front of ya and I’m truly so-\""
+
+    "Narrator" "You cut him off before he has a chance to apologize again."
+    mc "\"Look, Zephyr, I really need to tell you something.\""
+
+    "Narrator" "He looks at you with concern.""
+    z "\"Oh no, what is it, darlin’?\""
+
+    mc "\"Don’t worry, it’s nothing bad. I just want to inform you that the ship I took is now functioning. The repairs went by quickly, so I can continue my trip to Caeles Terra by tomorrow afternoon! Isn’t that great?\""
+
+    "Narrator" "You look at him with a smile and anticipation in your eyes as you wait for his answer."
+    "Narrator" "Zephyr gives you a smile, but his eyes tell a different story."
+
+    z "\"Well… I’m glad the ship is workin’ now, but I’m sure gonna miss ya! Does your trip really leave that early?\""
+
+    mc "\"Yes, it does.\""
+    "Narrator" "His smile falls at your confirmation."
+
+    z "\"Do ya really want to leave so soon?\""
+    mc "\"Well, I kinda have no choice, Zephyr. I’m not too sure about when I would be able to fly to Caeles Terra again, or if I can return to Earth on time if I stay here longer.\""
+    z "\"Would it really kill ya to spend your vacation here instead? You did mention earlier that you spend too much time looking at a screen on Earth. Wouldn’t it be nice to unwind over here where there are less screens and gadgets?\""
+    "Narrator" "Zephyr waits on your response."
+    "Narrator" "You give some time to the thought of staying."
+
+    mc "Sure, a beachy environment would be very refreshing… but this planet feels like home. It reminds me of what life was like before Earth’s society felt the need to devote their lives to screens." 
+    mc "It might be nice to stay here and enjoy the tranquility on Rurigena Terra." 
+    mc "It seems I’d be staying here with free shelter and food too, which is a huge plus since I know I’d be spending absurd amounts of money at Caeles Terra."
+    "Narrator" "You nod before speaking to Zephyr."
+    mc "\"You’re right. I haven’t really appreciated the slow life enough, I don’t think I’ve really been given the chance to wind down in a while anyway. I’ll stay, but I can probably only continue my trip for the rest of the week.\""
+
+    "Narrator" "Zephyr gives a huge smile, reaching to hold your hands in his."
+
+    z "\"Well, I’m mighty pleased! I’ll be sure to show ya more hidden gems on this planet, [mcname]. We could even go on a horse ride together and see the true beauty of nature here!\""
+
+    "Narrator" "He smiles before pulling your hands to his lips and planting two soft kisses above your knuckles. He lets go of your hands gently before standing up."
+
+    z "\"Now, you should go on to the guest room and catch some shut-eye, sweetheart. It’s gettin’ late, and I want you to be well rested for tomorrow mornin’!\""
+
+    "Narrator" "You nod and smile before wishing Zephyr a good night. Your cheeks feel rosy as you make your way to the guest bedroom and settle down for the night. Tired from an eventful day, you fall into a deep sleep almost immediately after your head hits the pillow."
+
+    # END DAY 2
+
+    z "\"Mornin’ sweetheart!\""
+    "Narrator" "Zephyr exclaims as he sets a plate of breakfast and a different juice on the table for you."
+
+    mc "\"Good morning, Zephyr!\""
+
+    "Narrator" "You say back to him as you sit down with him at the kitchen table. You both engage in conversation while eating, talking about how y’all slept last night to the plans for later in the day. Silence hits the table here and there as y’all take a break from talking to eat."
+    "Narrator" "In those moments, you think about how safe you feel in the decision you made. You feel warm and fuzzy while appreciating the fact that Zephyr brings new experiences to you while still making you feel at home."
+    "Narrator" "The meal ends, and Zephyr cleans up the kitchen while you drink your juice and stare out at the farm from the kitchen window. You take a moment to slow down and admire the planet you will stay on for the rest of your trip."
+
+    #END
+    return
 
 label silas:
     scene bg street day with fade
