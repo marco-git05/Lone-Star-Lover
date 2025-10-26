@@ -424,5 +424,5 @@ label start:
 
         s "\"That was really fun, I am glad that I was able to show you the town before you continue on your way.\""
 
-
     return
+
