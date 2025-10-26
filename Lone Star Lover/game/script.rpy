@@ -167,9 +167,50 @@ label start:
 
         show zephyr happy closed
         menu:
-            "Well, it doesn’t matter the cost, it’s all I have.":
+            "Oh… Well, thank you! I’ll stay for tonight and be up and out of your way tomorrow night then.":
                 pass
-            "Oh no … Do you have any other recommendations for where to stay?":
+            "Thank you so, so much! I’m glad I won’t have to walk in the streets after dark.":
                 pass
+
+        "Narrator" "Zephyr steps aside to let you in. His home is decorated with colorful, cozy furniture. Warm lighting surrounds you as you walk down the main hallway of the house and find your way to the guest bedroom."
+
+        scene bg black with fade
+        "Narrator" "You let out a deep breath as your tense muscles finally relax."
+
+        mc "I guess this is my room for the night. I shouldn’t unpack too much, only the necessities."
+
+        "Narrator" "You take out the belongings you need for the night and change into comfy clothes to sleep in. As you are checking your phone for updates on your ship, a knock is heard at your door."
+
+        mc "\"Come in!\""
+
+        show zephyr default open with dissolve
+        "Narrator" "Zephyr enters the room holding a glass of warm milk and a soft, star-shaped pastry."
+
+        z "\"I’m not sure if you have eaten yet, and I didn’t want to prepare a large meal for you since you need to rest up. I figured this would hold you ‘til the morning.\""
+
+        show zephyr default closed
+        mc "\"Thank you, Zephyr… this is very kind of you.\""
+
+        show zephyr happy open
+        z "\"My pleasure. Oh, by the way, how do you like your eggs in the morning?\""
+
+        show zephyr happy closed
+        menu:
+            "Sunny side up.":
+                $ z_eggs = "sunny"
+            "Scrambled.":
+                $ z_eggs = "scrambled"
+
+        show zephyr default open
+        z "\"Okay, got it. Sleep well, dear.\""
+
+        hide zephyr with dissolve
+
+        "Narrator" "You take some time to enjoy your pastry and milk while scrolling through news about the spaceship crash on Rurigena Terra. After finishing your small meal, you turn off the light and slowly drift into a deep slumber."
+
+        scene bg black with fade
+        pause(2.0)
+
+
 
     return
