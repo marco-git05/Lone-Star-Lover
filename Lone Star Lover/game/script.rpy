@@ -147,5 +147,29 @@ label start:
         mc "\"I was on my way to Caeles Terra for vacation before my ship crashed here.\""
         mc "\"I have nowhere to go, really, but I overheard a couple talking about a place called The Wrangler Inn.\""
 
+        show zephyr angry closed
+        "Narrator" "Zephyr grimaces a little at the mention of the inn."
+        show zephyr default open
+        z "\"That place is further in town… and it costs a pretty penny.\""
+
+        show zephyr default closed
+        menu:
+            "Well, it doesn’t matter the cost, it’s all I have.":
+                pass
+            "Oh no … Do you have any other recommendations for where to stay?":
+                pass
+
+        show zephyr default open
+        z "\"Lucky for you, I have a guest room I can offer to you for the duration of your stay.\""
+        show zephyr happy open
+        z "\"It’s free of charge! Knowing that you are somewhere safe for the night is enough for me.\""
+
+
+        show zephyr happy closed
+        menu:
+            "Well, it doesn’t matter the cost, it’s all I have.":
+                pass
+            "Oh no … Do you have any other recommendations for where to stay?":
+                pass
 
     return
