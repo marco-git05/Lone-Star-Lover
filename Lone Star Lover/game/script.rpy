@@ -197,9 +197,9 @@ label start:
         show zephyr happy closed
         menu:
             "Sunny side up.":
-                $ z_eggs = "sunny"
+                pass
             "Scrambled.":
-                $ z_eggs = "scrambled"
+                pass
 
         show zephyr default open
         z "\"Okay, got it. Sleep well, dear.\""
@@ -212,10 +212,26 @@ label start:
         pause(2.0)
 
         # END DAY 1
-        $ day = 2
-
 
     label day_2:
+        "Narrator" "Warm sunlight fills your room as you wake up. Your eyes softly flutter open to find something yellow stuck to your forehead."
+        "Narrator" "You gently remove it — it's a note that reads: {b}\"Good mornin’ darlin'! Breakfast is waiting for you in the kitchen. - Zephyr\"{/b}"
+        "Narrator" "You smile before stretching and getting out of bed."
+
+
+        scene bg zephyr house outside with fade
+        "Narrator" "As you follow the scent into the kitchen, Zephyr is seen plating two meals."
+
+
+        show zephyr default open with dissolve
+        z "\"Mornin’, [mcname]! I made you some eggs, toast, and sausage to start the day. Come sit and eat up! Oh, here’s a glass of juice, too.\""
+
+        "Narrator" "He sets your plate and a shimmering pink drink in front of you."
+
+        z "\"Now, I reckon this drink is unfamiliar to you. Don’t be afraid of it — it’s made from fresh fruits from my garden! It’s full of vitamins, so it’s real good for you!\""
+
+
+        mc "..."
 
 
 
