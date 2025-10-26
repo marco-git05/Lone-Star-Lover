@@ -466,9 +466,26 @@ label start:
         mc "\"This is delicious, Zephyr! Thank you for making enough for all of us.\""
 
         show zephyr flustered open at right
-        z "\"Course, darlin! Anything for you.\""
+        z "\"Course, darlin! Anything for {b}you{/b}.\""
 
-    
+        show zephyr angry open at right
+        z "\"Though I wasn’t expectin’ extra company tonight.\""
+
+        show silas angry open at left with hpunch
+        s "\"I appreciate the hospitality. Though I have to say, it’s quite isolated out here. Far from town for someone visiting.\""
+        z "\"Some folks appreciate the peace and quiet. The kind of safety you can only find away from the…distractions of town.\""
+        s "\"Distractions? Or connections? Seems like (MC’s name) here enjoyed exploring what the town had to offer today.\""
+        z "\"Now you listen here, city slicker. I don’t much appreciate what you’re implyin’. I opened my home to (MC’s name) out of the kindness of my heart, not some smooth-talkin’ stranger to-{nw}\"" with hpunch
+        s "\"Smooth-talking? I simply showed them around. Unlike someone who conveniently has a guest room ready for stranded travelers. How often does that happen, I wonder?\"" with hpunch
+
+        show zephyr angry open at center with easeinleft
+        z "\"You got some nerve comin’ into MY home and questionin’ MY intentions! At least I didn’t send ‘em wanderin’ down the wrong road in the first place!\"" with hpunch
+
+        menu: 
+            "Zypher":
+                jump zephyr
+            "Salis":
+                jump silas
 
     label zephyr:
         "Narrator" "You tuck your phone back into your pocket before heading inside Zephyr’s home. You make your way towards the kitchen and find Zephyr cleaning up the last bits of the large dinner he prepared for y’all."
