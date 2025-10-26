@@ -257,7 +257,7 @@ label start:
         "Narrator" "You smile before stretching and getting out of bed."
 
 
-        scene bg zephyrs kitchen with fade
+        scene bg zephyrs kitchen day with fade
         "Narrator" "As you follow the scent into the kitchen, Zephyr is seen plating two meals."
 
 
