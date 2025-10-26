@@ -21,6 +21,9 @@ image bg zephyr house outside = "backrounds/bg_zypher_house_outside.png"
 image bg saloon = "backrounds/bg_saloon.png"
 image bg street night = "backrounds/bg_street_night.png"
 image bg street day = "backrounds/bg_street_day.png"
+image bg zephyrs kitchen day = "backrounds/bg_zephyer_kitchen_day.png"
+image bg zephyrs kitchen night = "backrounds/bg_zephers_kitchen_night.png"
+image bg silas hotel = "backrounds/bg_silas_hotel.png"
 
 # The game starts here.
 
@@ -135,6 +138,8 @@ label start:
         "{i}This road seems awfully lonely. I sure hope he gave me the correct directions! Maybe the inn is just in an isolated area?... I really hope that is the case.{/i}"
 
         scene bg zephyr house outside with fade
+        play music "audio/General Night.wav"
+
         "Narrator" "After walking a bit further, you see the end of the road without an inn accompanying it. You look around in a slight panic and only find the entrance to a farm up ahead."
         mc "\"Are you serious!? He really gave me the wrong directions? Is this some sort of prank, or does he really not know the way around his town!?\""
         mc "\"I have been walking for so long... By the time I walk back into town, the sun will set, and I will practically be stranded in the streets!\""
@@ -143,7 +148,11 @@ label start:
         "Narrator" "You take your luggage and push open the gate to the farm. Herds of cattle and plentiful crops are seen on either side of you as you get closer and closer towards the door of the farmhouse."
         "Narrator" "You place three knocks on the door and wait for a few seconds before the door swings open. A puzzled man makes eye contact with you before greeting you with a smile."
         
+        stop music
+
         show zephyr default open with dissolve
+
+        play music "audio/Romantic.wav"
 
         "???" "\"Howdy! My name is Zephyr. You don't seem to be from 'round these parts. What can I call you, dear?\""
 
@@ -195,7 +204,8 @@ label start:
 
         "Narrator" "Zephyr steps aside to let you in. His home is decorated with colorful, cozy furniture. Warm lighting surrounds you as you walk down the main hallway of the house and find your way to the guest bedroom."
 
-        scene bg black with fade
+        stop music 
+        scene bg zephyrs kitchen night with fade
         "Narrator" "You let out a deep breath as your tense muscles finally relax."
 
         mc "I guess this is my room for the night. I shouldn’t unpack too much, only the necessities."
@@ -205,6 +215,7 @@ label start:
         mc "\"Come in!\""
 
         show zephyr default open with dissolve
+        play music "audio/General Day.wav"
         "Narrator" "Zephyr enters the room holding a glass of warm milk and a soft, star-shaped pastry."
 
         z "\"I’m not sure if you have eaten yet, and I didn’t want to prepare a large meal for you since you need to rest up. I figured this would hold you ‘til the morning.\""
@@ -226,6 +237,7 @@ label start:
         z "\"Okay, got it. Sleep well, dear.\""
 
         hide zephyr with dissolve
+        stop music
 
         "Narrator" "You take some time to enjoy your pastry and milk while scrolling through news about the spaceship crash on Rurigena Terra. After finishing your small meal, you turn off the light and slowly drift into a deep slumber."
 
