@@ -228,11 +228,27 @@ label start:
 
         "Narrator" "He sets your plate and a shimmering pink drink in front of you."
 
-        z "\"Now, I reckon this drink is unfamiliar to you. Don’t be afraid of it — it’s made from fresh fruits from my garden! It’s full of vitamins, so it’s real good for you!\""
+        z "\"Now, I reckon this drink is unfamiliar to you. Don’t be afraid of it; it’s made from fresh fruits from my garden! It’s full of vitamins, so it’s real good for you!\""
+
+        "Narrator" "You smile at him before observing the drink. The juice smells slightly sweet as you put the rim of the cup to your lips and take a sip."
+        "Narrator" "Zephyr watches you, fidgeting with his thumbs, while you take in the floral and fruity flavor of the drink."
+
+        z "So… What do you think?"
+
+        menu:
+            "I’m not sure if this is my taste…":
+                $ z_affection -= 1
+                show zephyr angry closed
+                z "\"Oh! I’m sorry. I do own fruits from other planets, but I figured it’d be nice to show you something from here.\""
+                show zephyr default open
+                z "\"Here, have some water instead.\""
+            "It’s unique, but it reminds me of home.":
+                $ z_affection += 1
+                show zephyr happy open
+                z "\"Oh, really? That reminds me — I’ve been wondering about where you're from.\""
 
 
-        mc "..."
-
+        mc "\"I come from Earth.\""
 
 
 
