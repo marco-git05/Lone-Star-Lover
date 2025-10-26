@@ -295,6 +295,68 @@ label start:
 
         "Narrator" "You nod in acknowledgement before finishing up your meal. After you are done eating, you head back to your room to get ready for the day."
 
+        scene bg black with fade
+
+        "Narrator" "You open your phone."
+        mc "\"Wow, there are still no updates on the ship. It’s all the same information repeated over and over and over. Maybe I should listen to Zephyr and go out to explore the town.\""
+        "Narrator" "You grab a small bag to take any necessary belongings with you before heading out to town."
+
+        scene bg street day with fade
+
+        "Narrator" "You stroll at a leisurely pace throughout the streets."
+        mc "\"The town looks so beautiful now that I am not rushing around. I can actually take in the scenery and visit the businesses here.\""
+        "Narrator" "One building catches your eye by surprise. The sign reads “Prickly Pear Saloon.”" 
+        mc "\"I don’t think I’ve seen a saloon in a while… or at all! I can’t believe they have one here.\"" 
+        "Narrator" "You head towards the saloon and walk inside."
+
+        scene bg saloon with fade
+
+        "Narrator" "You take in the interior of the saloon. The lighting is dim and cozy, and many people are seen chatting and drinking at various tables inside." 
+        "Narrator" "Your gaze finds its way to the bar stand and onto a familiar figure. You chuckle to yourself before getting closer to the man that caught your eye for the second time on this planet." 
+        mc "“Silas?”"
+
+        show silas default open with dissolve
+        "Narrator" "He takes a sip of his drink before turning around to face you."
+
+        menu:
+            "“Hey Silas! What are you doing here?”":
+                mc "\"Hey Silas! What are you doing here?\""
+                s "\"Just here to cool down from the day. Why are you here?\""
+                mc "\"Uhm, well, I was just looking around the town, and I just wanted to take a look at this saloon before I head back to my place of stay before sundown.\""
+
+            "“Thanks Silas… I really appreciated your directions…”":
+                mc "\"Thanks Silas… I really appreciated your directions…\""
+
+        s "\"Oh, did you not stay at the Wrangler Inn last night?\""
+        mc "\"Uh, well I was able to find a very nice farm where I could stay for the night actually, no thanks to you.\""
+        "Narrator" "visibly upset"
+        s "\"Whatever. At least I am glad you found somewhere to stay.\""
+
+        s "\"Sorry, I did not mean to sound rude, but do you want to have some fun? We can play darts.\""
+        mc "\"Um, sure, I would love to play some games!\""
+
+    
+        "Narrator" "They both start playing darts for a bit. Silas is letting the MC win"
+
+        s "\"Holy cow, how are you so good at darts?\""
+        mc "\"Back on Earth I played darts with my friends, and I would always beat them when they would say they were better than me.\""
+        s "\"Well, let’s finish up this game with the final dart in my hand, with my eyes closed.\""
+        "Narrator" "throws dart"
+
+        "Narrator" "The MC starts laughing at his mistake. Silas gets flustered from his horrible miss."
+        "Narrator" "[mcname] goes to pick up the dart that Silas had missed from his final shot. And tries to return the dart to Silas."
+
+        s "\"You can keep the dart as a trophy of your win in beating me at darts.\""
+        mc "\"Well, thank you for this trophy, I will cherish this memory with it.\""
+        s "\"Hey, now that we're done with darts, do you want to go and have some more fun in exploring the town\""
+        "Narrator" "[mcname] gets flustered from Silas’s invitation to explore the town with him for her to explore."
+        mc "\"Yeah! I would love to do that!\""
+
+        scene bg street night with fade
+
+        "Narrator" "As Silas and the MC are exploring the town, Silas slowly warms up to MC throughout the exploration."
+
+        s "\"That was really fun, I am glad that I was able to show you the town before you continue on your way.\""
 
 
     return
