@@ -19,7 +19,7 @@ default z_affection = 0
 label start:
 
     label day_1:
-        scene bg airport day with fade 
+        scene bg generic space with fade
 
         "{i}Gate A-11... Gate A-11... Ah! I see it now. Finally, I can have some peace far, far away from my office of misery.{/i}"
         "Narrator" "You let out a long yawn."
