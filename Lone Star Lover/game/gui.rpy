@@ -39,7 +39,7 @@ define gui.hover_color = '#800000'
 
 ## The color used for a text button when it is selected but not focused. A
 ## button is selected if it is the current screen or preference value.
-define gui.selected_color = '#ffffff'
+define gui.selected_color = '#800000'
 
 ## The color used for a text button when it cannot be selected.
 define gui.insensitive_color = '#4c3228'
@@ -60,7 +60,7 @@ define gui.interface_text_color = '#4c3228'
 define gui.text_font = "Rye-Regular.ttf"
 
 ## The font used for character names.
-define gui.name_text_font = "DejaVuSans.ttf"
+define gui.name_text_font = "Rye-Regular.ttf"
 
 ## The font used for out-of-game text.
 define gui.interface_text_font = "Rye-Regular.ttf"
