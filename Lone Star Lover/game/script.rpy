@@ -26,6 +26,8 @@ image bg street day = "backrounds/bg_street_day.png"
 
 label start:
 
+    play music "audio/MainTheme.wav" volume 0.5
+
     label day_1:
         scene bg generic space with fade
 
@@ -38,11 +40,15 @@ label start:
         "Narrator" "You make your way into the ship, quickly finding an available seat. \nA few grunts are let out as you stuff your luggage into the storage next to your new place of slumber for the upcoming handful of hours." 
         "Narrator" "The seat feels cozy as you sink into it and lose a battle against your heavy eyelids."
 
+        stop music
+
         scene bg black with fade
 
         pause(3.0)
         
         scene bg inside ship with hpunch
+
+        play music "audio/Conflict.wav" volume 0.5
         
         "Narrator" "WHAM! Your eyes suddenly open as your body lunges forward before getting caught in a seatbelt. Your heartbeat pounds in your ears as you take in your surroundings and question what is happening around you."
         "{i}Strange... I do not remember putting my seatbelt on... I do not even remember falling asleep! A flight attendant must have taken care of me shortly after I knocked out. Gosh, my torso hurts. Why did we land so harshly?{/i}"
