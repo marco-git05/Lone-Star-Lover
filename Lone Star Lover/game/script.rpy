@@ -211,6 +211,13 @@ label start:
         scene bg black with fade
         pause(2.0)
 
+        # END DAY 1
+        $ day = 2
+
+
+    label day_2:
+
+
 
 
     return
