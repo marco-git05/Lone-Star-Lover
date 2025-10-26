@@ -1642,4 +1642,22 @@ screen credits:
 
         vbox:
 
-            text _("Hello world")
+            label "Coders"
+            text _("Marcopolo Agostadero")
+            text _("Andres Rodriguez\n")
+
+            label "Artists"
+            text _("Delaney Moore\n")
+
+            label "Music"
+            text _("Enoch Hwang\n")
+
+            label "SFX"
+            text _("\n")
+
+            label "UI"
+            text _("Delaney Moore")
+            text _("Marcopolo Agostadero\n")
+
+            label "Scriptwriting"
+            text _("\n")
