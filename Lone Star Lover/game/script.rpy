@@ -27,7 +27,7 @@ image bg street day = "backrounds/bg_street_day.png"
 label start:
 
     label day_1:
-        scene bg generic space with fade
+        scene bg space station with fade
 
         "{i}Gate A-11... Gate A-11... Ah! I see it now. Finally, I can have some peace far, far away from my office of misery.{/i}"
         "Narrator" "You let out a long yawn."
@@ -58,7 +58,7 @@ label start:
 
         "{i}Oh my... I should've expected to run into a stressful situation while going on vacation. God forbid I try to relax!{/i}"
         "Narrator" "You continue pushing through luggage before pulling the suitcase with your name out of the large pile."
-        $ mcname = renpy.input("\"What is your name?\"", length = 32)
+        $ mcname = renpy.input("What is your name?", length = 32)
         mc "\"Ugh! When did this thing get so heavy?\""
         "{i}I don't even know where I am or where I could stay!{/i}"
         "Narrator" "You clasp your hands over your face and take a deep breath in an attempt to calm down." 
@@ -93,10 +93,11 @@ label start:
         "???" "\"You should at least have some sense in you to look where you are going.\""
 
         menu:
-            "Huh? But I was looking where I was going...":
+            "???" "{cps=5000}\"You should at least have some sense in you to look where you are going.\"{/cps}"
+            "\"Huh? But I was looking where I was going...\"":
                 pass
-            "...Can you at least help me figure out where to go from here?":
-                $ s_affection += 1
+            "\"...Can you at least help me figure out where to go from here?\"":
+                pass
         
         "???" "\"Where are you heading?\""
         show silas angry closed
@@ -120,23 +121,24 @@ label start:
 
         scene bg zephyr house outside with fade
         "Narrator" "After walking a bit further, you see the end of the road without an inn accompanying it. You look around in a slight panic and only find the entrance to a farm up ahead."
-        mc "Are you serious!? He really gave me the wrong directions? Is this some sort of prank, or does he really not know the way around his town!?"
-        mc "I have been walking for so long… By the time I walk back into town, the sun will set, and I will practically be stranded in the streets!"
-        "Narrator" "You take a moment to collect your thoughts after expressing your worries about your current situation."
-        mc "Well, someone has to be taking care of that farm… right? I really hope the farm owner is home or I will be doomed for tonight."
+        mc "\"Are you serious!? He really gave me the wrong directions? Is this some sort of prank, or does he really not know the way around his town!?\""
+        mc "\"I have been walking for so long... By the time I walk back into town, the sun will set, and I will practically be stranded in the streets!\""
+        "Narrator" "You take a moment to collect your thoughts and figure out what to do now."
+        "{i}Well, someone has to be taking care of that farm... right? I really hope the farm owner is home or I will be doomed for tonight.{/i}"
         "Narrator" "You take your luggage and push open the gate to the farm. Herds of cattle and plentiful crops are seen on either side of you as you get closer and closer towards the door of the farmhouse."
         "Narrator" "You place three knocks on the door and wait for a few seconds before the door swings open. A puzzled man makes eye contact with you before greeting you with a smile."
         
         show zephyr default open with dissolve
-        
-        "???" "\"Howdy! My name is Zephyr. You don’t seem to be from ‘round these parts. What can I call you, dear?\""
+
+        "???" "\"Howdy! My name is Zephyr. You don't seem to be from 'round these parts. What can I call you, dear?\""
 
         show zephyr default closed
 
         menu:
-            "Uhm … Hello? My name is [mcname].":
+            "???" "{cps=5000}\"Howdy! My name is Zephyr. You don't seem to be from 'round these parts. What can I call you, dear?\"{/cps}"
+            "\"Uhm... Hello? My name is [mcname].\"":
                 pass
-            "Oh, howdy! My name is [mcname]!":
+            "\"Oh, howdy! My name is [mcname]!\"":
                 pass
 
         show zephyr default open
@@ -153,26 +155,27 @@ label start:
         show zephyr angry closed
         "Narrator" "Zephyr grimaces a little at the mention of the inn."
         show zephyr default open
-        z "\"That place is further in town… and it costs a pretty penny.\""
+        z "\"That place is further in town... and it costs a pretty penny.\""
 
         show zephyr default closed
         menu:
-            "Well, it doesn’t matter the cost, it’s all I have.":
+            z "{cps=5000}\"That place is further in town... and it costs a pretty penny.\"{/cps}"
+            "\"Well, it doesn't matter the cost, it's all I have.\"":
                 pass
-            "Oh no … Do you have any other recommendations for where to stay?":
+            "\"Oh no.... Do you have any other recommendations for where to stay?\"":
                 pass
 
         show zephyr default open
         z "\"Lucky for you, I have a guest room I can offer to you for the duration of your stay.\""
         show zephyr happy open
-        z "\"It’s free of charge! Knowing that you are somewhere safe for the night is enough for me.\""
+        z "\"It's free of charge! Knowing that you are somewhere safe for the night is enough for me.\""
 
 
         show zephyr happy closed
         menu:
-            "Oh… Well, thank you! I’ll stay for tonight and be up and out of your way tomorrow night then.":
+            "Oh... Well, thank you! I'll stay for tonight and be up and out of your way tomorrow night then.":
                 pass
-            "Thank you so, so much! I’m glad I won’t have to walk in the streets after dark.":
+            "Thank you so, so much! I'm glad I won't have to walk in the streets after dark.":
                 pass
 
         "Narrator" "Zephyr steps aside to let you in. His home is decorated with colorful, cozy furniture. Warm lighting surrounds you as you walk down the main hallway of the house and find your way to the guest bedroom."
