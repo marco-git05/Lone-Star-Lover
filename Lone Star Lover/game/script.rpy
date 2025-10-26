@@ -71,7 +71,7 @@ label start:
         "Woman" "\"Shhh! Lower your voice, other people might hear us! Just lead the way, there's no need to go over the directions right this second.\"" with vpunch
         "{i}Does it really only take three streets to get to {b}The Wrangler Inn{/b}? I do not know the last street, but maybe I can figure it out along the way. I should start leaving before anyone else does!{/i}"
 
-        scene bg town day with fade
+        scene bg street day with fade
 
         "Narrator" "You take your luggage and quickly walk away from the ship, keeping the street names in your mind. You find {b}Calico Street{/b} and hurry down the road as you start to run out of breath from the long walk."
         "Narrator" "Soon enough, you spot a sign on your left labeled {b}\"Blossom St.\"{/b}"
@@ -252,6 +252,48 @@ label start:
 
 
         mc "\"I come from Earth.\""
+
+        show zephyr default open
+        z "\"Well, I’ll be! We rarely get Earth folk ‘round here nowadays.\""
+
+
+        mc "\"Oh? Why is that?\""
+
+
+        show zephyr default closed
+        z "\"They just don’t appreciate our lifestyle. Our days move quicker here, but our hearts don’t. We don’t rush life. The planet gives us all we need — so we live slow and live well.\""
+
+        mc "\"Wow… what a shock. Most of my life is practically given to a large screen, so it’s kind of surprising to hear your take on technology.\""
+
+
+        z "\"Hmm, I see. So what do you do on Earth?\""
+
+
+        mc "\"I mainly work on a communications team for a large business. The pay is great, but the work can be insanely boring most of the time.\""
+        mc "\"It’s the reason I took this trip, actually. I thought I’d have a chance to relax and enjoy a beachy scenery, it's what Caeles Terra is known for anyway.\""
+        mc "\"But I guess the universe didn’t want me to have that just yet. Instead, I get to be stuck here.\""
+
+        "Narrator" "You notice that your mood has fallen flat, and you think Zephyr noticed too, since he stares at you with worry in his eyes. You quickly fix your posture and give a small smile."
+
+        menu:
+            "\"Although it isn’t too bad here, a vacation is still a vacation!\"":
+                pass
+            "\"I don’t mind being here, though. After all, I got to meet you and stay at your lovely farm.\"":
+                $ z_affection += 1
+
+
+        show zephyr happy open
+        z "\"I’m glad you are enjoying it here, then. Have you had a chance to explore the town a bit?\""
+
+
+        mc "\"Not really, I was mainly rushing to find the inn. I didn’t get a chance to visit any shops or restaurants.\""
+
+        z "\"Well, I think you should take some time to enjoy the town before your flight is ready. Please be back before sunset, though.\""
+
+        hide zephyr with dissolve
+
+
+        "Narrator" "You nod in acknowledgement before finishing up your meal. After you are done eating, you head back to your room to get ready for the day."
 
 
 
