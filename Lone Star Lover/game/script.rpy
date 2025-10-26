@@ -488,6 +488,8 @@ label start:
                 jump silas
 
     label zephyr:
+        scene bg black
+        
         "Narrator" "You tuck your phone back into your pocket before heading inside Zephyr’s home. You make your way towards the kitchen and find Zephyr cleaning up the last bits of the large dinner he prepared for y’all."
         mc "\"Hey, uhm… Zephyr?\""
 
@@ -551,7 +553,7 @@ label start:
         return
 
     label silas:
-        scene bg street day with fade
+        scene bg black
 
         "Narrator" "You tuck your phone back in your pocket before making the decision to head back into town." 
         "Narrator" "As you make your way through the rows of quaint buildings, you see the hotel Silas mentioned previously." 
