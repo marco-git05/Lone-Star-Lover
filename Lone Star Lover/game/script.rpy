@@ -321,7 +321,7 @@ label start:
         menu:
             "“Hey Silas! What are you doing here?”":
                 mc "\"Hey Silas! What are you doing here?\""
-                show silas neutral close
+                show silas neutral closed
                 s "\"Just here to cool down from the day. Why are you here?\""
                 mc "\"Uhm, well, I was just looking around the town, and I just wanted to take a look at this saloon before I head back to my place of stay before sundown.\""
 
@@ -333,10 +333,10 @@ label start:
         show silas neutral open
         s "\"Oh, did you not stay at the Wrangler Inn last night?\""
         mc "\"Uh, well I was able to find a very nice farm where I could stay for the night actually, no thanks to you.\""
-        show silas angry close
+        show silas angry closed
         s "\"Whatever. At least I am glad you found somewhere to stay.\""
 
-        show silas sad close
+        show silas sad closed
         s "\"Sorry, I did not mean to sound rude, but do you want to have some fun? We can play darts.\""
         mc "\"Um, sure, I would love to play some games!\""
 
@@ -346,7 +346,7 @@ label start:
         show silas neutral open
         s "\"Holy cow, how are you so good at darts?\""
         mc "\"Back on Earth I played darts with my friends, and I would always beat them when they would say they were better than me.\""
-        show silas neutral close
+        show silas neutral closed
         s "\"Well, let’s finish up this game with the final dart in my hand, with my eyes closed.\""
         "Narrator" "throws dart"
         show silas flustered open
@@ -356,7 +356,7 @@ label start:
         show silas neutral open
         s "\"You can keep the dart as a trophy of your win in beating me at darts.\""
         mc "\"Well, thank you for this trophy, I will cherish this memory with it.\""
-        show silas neutral close
+        show silas neutral closed
         s "\"Hey, now that we're done with darts, do you want to go and have some more fun in exploring the town\""
         "Narrator" "[mcname] gets flustered from Silas’s invitation to explore the town with him for her to explore."
         mc "\"Yeah! I would love to do that!\""
