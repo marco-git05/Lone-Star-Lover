@@ -51,11 +51,12 @@ label start:
         "Oh my... I should've expected to run into a stressful situation while going on vacation. God forbid I try to relax!"
         "Narrator" "You continue pushing through luggage before pulling the suitcase with your name out of the large pile."
         $ mcname = renpy.input("\"What is your name?\"", length = 32)
+        mc "\"Ugh! When did this thing get so heavy?\""
         "I don't even know where I am or where I could stay!"
         "Narrator" "You clasp your hands over your face and take a deep breath in an attempt to calm down." 
         "Narrator" "Suddenly, you overhear a couple's discussion nearby."
         "Woman" "\"Wow... I don't think a flight has been derailed by this planet in a loooong time!\""
-        "Man" "\"Yeah, I think about ten years ago. I guess it was due for another surprise. Say, what was the name of the hotel we stayed at the last time this happened?\""
+        "Man" "\"Yeah, I think it was about ten years ago. I guess it was due for another surprise. Say, what was the name of the hotel we stayed at the last time this happened?\""
         "Woman" "\"I think it was called {b}The Wrangler Inn{/b}.\""
         "Woman" "\"Once we find all of our luggage, then we can head out. We have to hurry, though. The rooms fill up quickly over there. Do you remember how to get to the hotel?\""
         "Man" "\"Sure, we have to head towards {b}Calico Lane{/b}, and then from there we turn left to {b}Blossom Street{/b} before finally turning to-\"{nw}"
@@ -71,12 +72,14 @@ label start:
         "Narrator" "You take a few seconds to catch your breath before dashing down {b}Blossom Street{/b}, your eyes angled downwards to make sure you don't step in any holes or trip on any bumps in the ground."
         "Narrator" "You keep pushing before suddenly realizing that your body is no longer moving forward. Your face collides with a black, denim barrier before you slam against the ground."
         mc "\"What in the world?\""
+        show silas angry closed with dissolve
         "Narrator" "You turn over to your back before your eyes flutter open to look above you. A tall figure adorned in dark clothes stares down at you with an arm stretched out. You grab on and stand up before dusting yourself off."
         mc "{cps=35}\"I'm so sorry!\"{/cps}{nw}"
         mc "{cps=35}\"I didn't plan to be on this planet!\"{/cps}{nw}"
         mc "{cps=35}\"I was taking a flight to a different one!\"{/cps}{nw}"
         mc "{cps=35}\"And then all of a sudden my flight crashed here!\"{/cps}{nw}"
         mc "{cps=35}\"And now I am looking for a place to stay and-\"{/cps}{nw}"
+        show silas angry open
         "???" "\"Enough.\"" 
         "???" "\"You should at least have some sense in you to look where you are going.\""
 
@@ -87,10 +90,13 @@ label start:
                 $ s_affection += 1
         
         "???" "\"Where are you heading?\""
+        show silas angry close
         mc "\"I'm going to The Wrangler Inn.\""
         "Narrator" "The man seems to ponder a bit before pointing to a street on the right."
+        show silas angry open
         "???" "\"You walk, not run, all the way down and then you will see the inn at the very end of the street. Make sure to stay alert.\""
         mc "\"Okay, got it. Thank you... uhm... What is your name?\""
+        show silas default open
         s "\"You can call me Silus.\""
         mc "My name is [mcname]"
 
