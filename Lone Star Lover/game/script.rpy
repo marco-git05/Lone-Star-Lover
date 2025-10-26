@@ -321,39 +321,49 @@ label start:
         menu:
             "“Hey Silas! What are you doing here?”":
                 mc "\"Hey Silas! What are you doing here?\""
+                show silas neutral close
                 s "\"Just here to cool down from the day. Why are you here?\""
                 mc "\"Uhm, well, I was just looking around the town, and I just wanted to take a look at this saloon before I head back to my place of stay before sundown.\""
 
             "“Thanks Silas… I really appreciated your directions…”":
                 mc "\"Thanks Silas… I really appreciated your directions…\""
+                show silas neutral open
+                s "\"Oh? Well… you're welcome.\""
 
+        show silas neutral open
         s "\"Oh, did you not stay at the Wrangler Inn last night?\""
         mc "\"Uh, well I was able to find a very nice farm where I could stay for the night actually, no thanks to you.\""
-        "Narrator" "visibly upset"
+        show silas angry close
         s "\"Whatever. At least I am glad you found somewhere to stay.\""
 
+        show silas sad close
         s "\"Sorry, I did not mean to sound rude, but do you want to have some fun? We can play darts.\""
         mc "\"Um, sure, I would love to play some games!\""
 
     
         "Narrator" "They both start playing darts for a bit. Silas is letting the MC win"
 
+        show silas neutral open
         s "\"Holy cow, how are you so good at darts?\""
         mc "\"Back on Earth I played darts with my friends, and I would always beat them when they would say they were better than me.\""
+        show silas neutral close
         s "\"Well, let’s finish up this game with the final dart in my hand, with my eyes closed.\""
         "Narrator" "throws dart"
-
-        "Narrator" "The MC starts laughing at his mistake. Silas gets flustered from his horrible miss."
+        show silas flustered open
+        "Narrator" "[mcname] starts laughing at his mistake. Silas gets flustered from his horrible miss."
         "Narrator" "[mcname] goes to pick up the dart that Silas had missed from his final shot. And tries to return the dart to Silas."
 
+        show silas neutral open
         s "\"You can keep the dart as a trophy of your win in beating me at darts.\""
         mc "\"Well, thank you for this trophy, I will cherish this memory with it.\""
+        show silas neutral close
         s "\"Hey, now that we're done with darts, do you want to go and have some more fun in exploring the town\""
         "Narrator" "[mcname] gets flustered from Silas’s invitation to explore the town with him for her to explore."
         mc "\"Yeah! I would love to do that!\""
 
         scene bg street night with fade
 
+        show silas neutral open
         "Narrator" "As Silas and the MC are exploring the town, Silas slowly warms up to MC throughout the exploration."
 
         s "\"That was really fun, I am glad that I was able to show you the town before you continue on your way.\""
