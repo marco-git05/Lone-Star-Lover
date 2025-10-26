@@ -13,6 +13,11 @@ define mc = Character("[mcname]")
 default s_affection = 0
 default z_affection = 0
 
+image bg black = "#000000"
+image bg generic space = "backrounds/bg_generic_space.png"
+image bg inside ship = "backrounds/bg_inside_ship.png"
+image bg space station = "backrounds/bg_space_station.png"
+
 
 # The game starts here.
 
@@ -25,7 +30,7 @@ label start:
         "Narrator" "You let out a long yawn."
         "{i}It sucks that I had to wake up early still... I guess vacations still have their ups and downs despite being a form of relaxation. At least the flight will be long enough to catch some sleep before I land on Caeles Terra.{/i}"
 
-        scene bg spaceship day with fade
+        scene bg inside ship with fade
 
         "Narrator" "You make your way into the ship, quickly finding an available seat. \nA few grunts are let out as you stuff your luggage into the storage next to your new place of slumber for the upcoming handful of hours." 
         "Narrator" "The seat feels cozy as you sink into it and lose a battle against your heavy eyelids."
@@ -34,7 +39,7 @@ label start:
 
         pause(3.0)
         
-        scene bg spaceship day with hpunch
+        scene bg inside ship with hpunch
         
         "Narrator" "WHAM! Your eyes suddenly open as your body lunges forward before getting caught in a seatbelt. Your heartbeat pounds in your ears as you take in your surroundings and question what is happening around you."
         "{i}Strange... I do not remember putting my seatbelt on... I do not even remember falling asleep! A flight attendant must have taken care of me shortly after I knocked out. Gosh, my torso hurts. Why did we land so harshly?{/i}"
@@ -46,7 +51,7 @@ label start:
         "Intercom" "\"OH, BEFORE I FORGET... \""
         "Intercom" "\"WELCOME TO RURIGENA TERRA!\""
 
-        scene bg lugagge unit with fade
+        scene bg space station with fade
 
         "{i}Oh my... I should've expected to run into a stressful situation while going on vacation. God forbid I try to relax!{/i}"
         "Narrator" "You continue pushing through luggage before pulling the suitcase with your name out of the large pile."
