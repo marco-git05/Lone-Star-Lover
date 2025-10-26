@@ -24,7 +24,7 @@ image bg street night = "backrounds/bg_street_night.png"
 image bg street day = "backrounds/bg_street_day.png"
 image bg zephyrs kitchen day = "backrounds/bg_zephyer_kitchen_day.png"
 image bg zephyrs kitchen night = "backrounds/bg_zephers_kitchen_night.png"
-image bg silas hotel = "backrounds/bg_silas_hotel.png"
+image silas hotel = "backrounds/bg_silas_hotel.png"
 
 # The game starts here.
 
@@ -257,7 +257,7 @@ label start:
         "Narrator" "You smile before stretching and getting out of bed."
 
 
-        scene bg zephyr house outside with fade
+        scene bg zephyrs kitchen with fade
         "Narrator" "As you follow the scent into the kitchen, Zephyr is seen plating two meals."
 
 
@@ -392,7 +392,7 @@ label start:
         mc "\"Um, sure, I would love to play some games!\""
 
         hide silas with dissolve
-        "Narrator" "You and Silas start playing darts for a bit.{w=0.5}.{w=0.5}.{w=0.5} Silas is letting the you win"
+        "Narrator" "You and Silas start playing darts for a bit.{w=0.5}.{w=0.5}.{w=0.5} Silas is letting the you win."
 
         show silas default open
         s "\"Holy cow, how are you so good at darts?\""
@@ -406,23 +406,169 @@ label start:
 
         show silas default open
         s "\"You can keep the dart as a trophy of your win in beating me at darts.\""
-        show silas deafult closed
+        show silas default closed
         mc "\"Well, thank you for this trophy, I will cherish this memory with it.\""
-        show silas happy closed
+        show silas happy open
         s "\"Hey, now that we're done with darts, do you want to go and have some more fun in exploring the town\""
-        "Narrator" "[mcname] gets flustered from Silas’s invitation to explore the town with him for her to explore."
+        "Narrator" "You get a warm feeling in your chest at the thought of exploring around town with Silas."
         mc "\"Yeah! I would love to do that!\""
 
         stop music
 
         scene bg street night with fade
 
-        play music "audio/General Night.wav"
+        show silas happy closed
+        "Narrator" "As you and Silas are exploring the town, he slowly warms up to you."
+
+        show silas happy open
+        s "\"That was really fun, I am glad that I was able to show you the town before you continue on your way.\""
+
+        show silas happy closed
+        mc "\"Me too! But, it is getting dark, and I need to head back to the farm before the sun fully goes down.\""
+
+        show silas angry closed
+        "Narrator" "Silas's expression shifts, becoming more serious at the mention of the farm."
 
         show silas default open
-        "Narrator" "As Silas and the MC are exploring the town, Silas slowly warms up to MC throughout the exploration."
+        s "\"Oh, who’s farm were you staying at last night?\""
 
-        s "\"That was really fun, I am glad that I was able to show you the town before you continue on your way.\""
+        show silas default closed
+        mc "\"I stayed at Zephyr’s farm not too far from here.\""
+
+        show silas angry closed
+        pause(1.0)
+        show silas default closed
+        "Narrator" "A flicker of concern crosses Silas's face, but he masks it quickly."
+
+        show silas sad open
+        s "\"...{w=0.5}do you want me to walk you to Zephyr’s farm before dark?\""
+
+        show silas happy closed
+        mc "\"Yeah, I would appreciate that! Let’s go!\""
+
+        scene bg zephyrs kitchen night with fade
+
+        show silas default closed at left
+        "Narrator" "You and Silas sit down at the dinner table while Zephyr sets the table with plates and silverware for the three of y’all. Zephyr then places a wide array of appetizing dishes in the center of the table for y’all to eat."
+
+        show zephyr default open at right with easeinleft
+        z "\"Here is food that I have prepared for y’all. It is a lot of grub, so it may be a little good that Silas came to eat with us, dear. Well enough jawing from me, go on and dig in!\""
+
+        show zephyr default closed at right
+        mc "\"What is that you made for us to eat, Zephyr?\""
+
+        show zephyr happy open at right
+        z "\"Well, I struggled when trying to figure out ya taste, so I made a few different dishes. I made some good ol’ Cowboy Stew, cornbread, Shootin’ Star Casserole, Cowboy Candy, and some good ol’ greens.\""
+
+        show zephyr angry closed at right
+        "Narrator" "They begin eating in tense silence. Zephyr watches Silas carefully from across the table, his grip tight on his fork. The mounting tension isn’t so visible to you as you dig into your meal and enjoy every bite."
+
+        mc "\"This is delicious, Zephyr! Thank you for making enough for all of us.\""
+
+        show zephyr flustered open at right
+        z "\"Course, darlin! Anything for you.\""
+
+    
+
+    label zephyr:
+        "Narrator" "You tuck your phone back into your pocket before heading inside Zephyr’s home. You make your way towards the kitchen and find Zephyr cleaning up the last bits of the large dinner he prepared for y’all."
+        mc "\"Hey, uhm… Zephyr?\""
+
+        "Narrator" "His head whips around to face you and gives you a smile."
+        z "\"Oh hey there, darlin’! I’m glad to see ya came back. Ya got enough time to clear your head out there?\""
+
+        mc "\"Yes, I did, thank you for giving me my space.\""
+
+        z "\"Of course, dear. I’m so sorry for earlier, I don’t know what got into me back there. I guess I just don’t trust people like that Silas… especially when it comes to you, [mcname]. But that doesn’t mean I should lose my temper in front of ya and I’m truly so-\""
+
+        "Narrator" "You cut him off before he has a chance to apologize again."
+        mc "\"Look, Zephyr, I really need to tell you something.\""
+
+        "Narrator" "He looks at you with concern."
+        z "\"Oh no, what is it, darlin’?\""
+
+        mc "\"Don’t worry, it’s nothing bad. I just want to inform you that the ship I took is now functioning. The repairs went by quickly, so I can continue my trip to Caeles Terra by tomorrow afternoon! Isn’t that great?\""
+
+        "Narrator" "You look at him with a smile and anticipation in your eyes as you wait for his answer."
+        "Narrator" "Zephyr gives you a smile, but his eyes tell a different story."
+
+        z "\"Well… I’m glad the ship is workin’ now, but I’m sure gonna miss ya! Does your trip really leave that early?\""
+
+        mc "\"Yes, it does.\""
+        "Narrator" "His smile falls at your confirmation."
+
+        z "\"Do ya really want to leave so soon?\""
+        mc "\"Well, I kinda have no choice, Zephyr. I’m not too sure about when I would be able to fly to Caeles Terra again, or if I can return to Earth on time if I stay here longer.\""
+        z "\"Would it really kill ya to spend your vacation here instead? You did mention earlier that you spend too much time looking at a screen on Earth. Wouldn’t it be nice to unwind over here where there are less screens and gadgets?\""
+        "Narrator" "Zephyr waits on your response."
+        "Narrator" "You give some time to the thought of staying."
+
+        mc "Sure, a beachy environment would be very refreshing… but this planet feels like home. It reminds me of what life was like before Earth’s society felt the need to devote their lives to screens." 
+        mc "It might be nice to stay here and enjoy the tranquility on Rurigena Terra." 
+        mc "It seems I’d be staying here with free shelter and food too, which is a huge plus since I know I’d be spending absurd amounts of money at Caeles Terra."
+        "Narrator" "You nod before speaking to Zephyr."
+        mc "\"You’re right. I haven’t really appreciated the slow life enough, I don’t think I’ve really been given the chance to wind down in a while anyway. I’ll stay, but I can probably only continue my trip for the rest of the week.\""
+
+        "Narrator" "Zephyr gives a huge smile, reaching to hold your hands in his."
+
+        z "\"Well, I’m mighty pleased! I’ll be sure to show ya more hidden gems on this planet, [mcname]. We could even go on a horse ride together and see the true beauty of nature here!\""
+
+        "Narrator" "He smiles before pulling your hands to his lips and planting two soft kisses above your knuckles. He lets go of your hands gently before standing up."
+
+        z "\"Now, you should go on to the guest room and catch some shut-eye, sweetheart. It’s gettin’ late, and I want you to be well rested for tomorrow mornin’!\""
+
+        "Narrator" "You nod and smile before wishing Zephyr a good night. Your cheeks feel rosy as you make your way to the guest bedroom and settle down for the night. Tired from an eventful day, you fall into a deep sleep almost immediately after your head hits the pillow."
+
+        # END DAY 2
+
+        z "\"Mornin’ sweetheart!\""
+        "Narrator" "Zephyr exclaims as he sets a plate of breakfast and a different juice on the table for you."
+
+        mc "\"Good morning, Zephyr!\""
+
+        "Narrator" "You say back to him as you sit down with him at the kitchen table. You both engage in conversation while eating, talking about how y’all slept last night to the plans for later in the day. Silence hits the table here and there as y’all take a break from talking to eat."
+        "Narrator" "In those moments, you think about how safe you feel in the decision you made. You feel warm and fuzzy while appreciating the fact that Zephyr brings new experiences to you while still making you feel at home."
+        "Narrator" "The meal ends, and Zephyr cleans up the kitchen while you drink your juice and stare out at the farm from the kitchen window. You take a moment to slow down and admire the planet you will stay on for the rest of your trip."
+
+        #ENDING 1
+        return
+
+    label silas:
+        scene bg street day with fade
+
+        "Narrator" "You tuck your phone back in your pocket before making the decision to head back into town." 
+        "Narrator" "As you make your way through the rows of quaint buildings, you see the hotel Silas mentioned previously." 
+        "Narrator" "As you walk up to the lobby, you spot Silas sitting on a beat up sofa looking a bit dejected."
+        mc "\"Silas?\""
+
+        "Narrator" "Turning to look towards the source of the noise, his face lights up at the sight of you."
+
+        s "\"[mcname]! You came. Did stepping out for a minute clear your head and show you the right choice? I was beginning to think that oaf had won your heart. I’m glad you made the decision to join me.\""
+
+        "Narrator" "You roll your eyes at Silas’s comment, heading over to where he is sitting"
+
+        mc "\"Well I wouldn't call him that, but I did come to the realization that I am meant to travel.\"" 
+        mc "\"While staying here for a bit would have been nice as the air is the cleanest I’ve found so far in my travels, I couldn't imagine myself leaving my life behind for what this planet holds.\""
+
+        "Narrator" "Standing to meet you, Silas takes your hand and begins leading you to where you assume his room is located."
+        s "\"Well I’m glad you came to that decision on your own. While I would love to travel with you, I would never want to force you into something that you know you wouldn’t like.\""
+
+        "Narrator" "After a brief minute of walking, you arrive at the entrance to one of the units. Number 203. As Silas unlocks the door and steps in, you can’t help but smile at him with a fond look on your face."
+        "Narrator" "As you settle into the hotel unit, Silus makes an effort to ensure you are comfortable in his temporary space. With a warm smile on his face, he settles beside you."
+
+        s "\"Alright kitten, get a restful night’s sleep and we’ll head out early tomorrow morning, so that we can ensure that we don’t miss our flight out of here.\""
+
+        # DAY 3
+
+        "Narrator" "As the sun rises over the horizon with warm hues of pink and green. You and Silas awake to the sound of hotel goers meandering about the walkways outside the units and towns-folk bustling about the dirt paved roads."
+
+        "Narrator" "Though the both of you would like a slow morning walking up, enjoying each other's company, you know that is not an option." 
+        "Narrator" "As you quickly gather your belongings and head out the door with Silas by your side, you can’t help but smile up at the bright sky."
+        "Narrator" "Entering the spaceport, you see the newly repaired ship waiting at the dock, new side paneling gleaming in the light."
+        "Narrator" "As you and Silas begin boarding the ship, he takes your hand in his, glancing over with a cheery smile on his face. As you look forward to the horizon, you can’t help but wonder what your future has in store."
+
+        # ENDING 2
+        return
 
     return
 
