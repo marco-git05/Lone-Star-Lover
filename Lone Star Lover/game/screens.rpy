@@ -1654,9 +1654,6 @@ screen credits:
             label "Music"
             text _("Enoch Hwang\n")
 
-            label "SFX"
-            text _("\n")
-
             label "UI"
             text _("Delaney Moore")
             text _("Marcopolo Agostadero\n")
