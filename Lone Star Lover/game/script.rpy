@@ -332,6 +332,7 @@ label start:
         "Narrator" "You grab a small bag to take any necessary belongings with you before heading out to town."
 
         scene bg street day with fade
+        play music "audio/General Day.wav"
 
         "Narrator" "You stroll at a leisurely pace throughout the streets."
         mc "\"The town looks so beautiful now that I am not rushing around. I can actually take in the scenery and visit the businesses here.\""
@@ -339,7 +340,9 @@ label start:
         mc "\"I don’t think I’ve seen a saloon in a while… or at all! I can’t believe they have one here.\"" 
         "Narrator" "You head towards the saloon and walk inside."
 
+        stop music
         scene bg saloon with fade
+        play music "audio/Saloon.wav"
 
         "Narrator" "You take in the interior of the saloon. The lighting is dim and cozy, and many people are seen chatting and drinking at various tables inside." 
         "Narrator" "Your gaze finds its way to the bar stand and onto a familiar figure. You chuckle to yourself before getting closer to the man that caught your eye for the second time on this planet." 
@@ -391,7 +394,11 @@ label start:
         "Narrator" "[mcname] gets flustered from Silas’s invitation to explore the town with him for her to explore."
         mc "\"Yeah! I would love to do that!\""
 
+        stop music
+
         scene bg street night with fade
+
+        play music "audio/General Night.wav"
 
         show silas default open
         "Narrator" "As Silas and the MC are exploring the town, Silas slowly warms up to MC throughout the exploration."
