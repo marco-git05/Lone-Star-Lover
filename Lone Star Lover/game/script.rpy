@@ -17,7 +17,7 @@ image bg black = "#000000"
 image bg generic space = "backrounds/bg_generic_space.png"
 image bg inside ship = "backrounds/bg_inside_ship.png"
 image bg space station = "backrounds/bg_space_station.png"
-image zephyr house outside = "backrounds/bg_zypher_house_outside.png"
+image bg zephyr house outside = "backrounds/bg_zypher_house_outside.png"
 
 # The game starts here.
 
@@ -115,7 +115,7 @@ label start:
         "{i}What a strange encounter... That Silas... He seemed angry with me, yet caring at the same time?{/i}"
         "{i}This road seems awfully lonely. I sure hope he gave me the correct directions! Maybe the inn is just in an isolated area?... I really hope that is the case.{/i}"
 
-        scene zephyr house outside with fade
+        scene bg zephyr house outside with fade
         "Narrator" "After walking a bit further, you see the end of the road without an inn accompanying it. You look around in a slight panic and only find the entrance to a farm up ahead."
         mc "Are you serious!? He really gave me the wrong directions? Is this some sort of prank, or does he really not know the way around his town!?"
         mc "I have been walking for so long… By the time I walk back into town, the sun will set, and I will practically be stranded in the streets!"
