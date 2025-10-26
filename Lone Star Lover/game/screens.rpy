@@ -1662,4 +1662,4 @@ screen credits:
             text _("Marcopolo Agostadero\n")
 
             label "Scriptwriting"
-            text _("\n")
+            text _("Enoch Hwang\n")
