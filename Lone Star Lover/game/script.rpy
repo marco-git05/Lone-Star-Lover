@@ -22,15 +22,13 @@ image bg zephyr house outside = "backrounds/bg_zypher_house_outside.png"
 image bg saloon = "backrounds/bg_saloon.png"
 image bg street night = "backrounds/bg_street_night.png"
 image bg street day = "backrounds/bg_street_day.png"
-image bg zephyrs kitchen day = "backrounds/bg_zephyer_kitchen_day.png"
+image bg zephyrs kitchen = "backrounds/bg_zephyer_kitchen.png"
 image bg zephyrs kitchen night = "backrounds/bg_zephers_kitchen_night.png"
 image silas hotel = "backrounds/bg_silas_hotel.png"
 
 # The game starts here.
 
 label start:
-
-    play music "audio/MainTheme.wav" volume 0.5
 
     label day_1:
         scene bg generic space with fade
@@ -44,15 +42,11 @@ label start:
         "Narrator" "You make your way into the ship, quickly finding an available seat. \nA few grunts are let out as you stuff your luggage into the storage next to your new place of slumber for the upcoming handful of hours." 
         "Narrator" "The seat feels cozy as you sink into it and lose a battle against your heavy eyelids."
 
-        stop music
-
         scene bg black with fade
 
         pause(3.0)
         
         scene bg inside ship with hpunch
-
-        play music "audio/Conflict.wav" volume 0.5
         
         "Narrator" "WHAM! Your eyes suddenly open as your body lunges forward before getting caught in a seatbelt. Your heartbeat pounds in your ears as you take in your surroundings and question what is happening around you."
         "{i}Strange... I do not remember putting my seatbelt on... I do not even remember falling asleep! A flight attendant must have taken care of me shortly after I knocked out. Gosh, my torso hurts. Why did we land so harshly?{/i}"
@@ -64,11 +58,7 @@ label start:
         "Intercom" "\"OH, BEFORE I FORGET... \""
         "Intercom" "\"WELCOME TO RURIGENA TERRA!\""
 
-        stop music
-
         scene bg space station with fade
-
-        play music "audio/General Day.wav"
 
         "{i}Oh my... I should've expected to run into a stressful situation while going on vacation. God forbid I try to relax!{/i}"
         "Narrator" "You continue pushing through luggage before pulling the suitcase with your name out of the large pile."
@@ -85,9 +75,7 @@ label start:
         "Woman" "\"Shhh! Lower your voice, other people might hear us! Just lead the way, there's no need to go over the directions right this second.\"" with vpunch
         "{i}Does it really only take three streets to get to {b}The Wrangler Inn{/b}? I do not know the last street, but maybe I can figure it out along the way. I should start leaving before anyone else does!{/i}"
 
-        stop music
-
-        scene bg street day with fade
+        scene bg street night with fade
 
         "Narrator" "You take your luggage and quickly walk away from the ship, keeping the street names in your mind. You find {b}Calico Street{/b} and hurry down the road as you start to run out of breath from the long walk."
         "Narrator" "Soon enough, you spot a sign on your left labeled {b}\"Blossom St.\"{/b}"
@@ -98,8 +86,6 @@ label start:
         mc "\"What in the world?\""
         
         show silas angry closed with dissolve
-        play music "audio/Romantic.wav"
-
         "Narrator" "You turn over to your back before your eyes flutter open to look above you. A tall figure adorned in dark clothes stares down at you with an arm stretched out. You grab on and stand up before dusting yourself off."
         mc "{cps=35}\"I'm so sorry!\"{/cps}{nw}"
         mc "{cps=35}\"I didn't plan to be on this planet!\"{/cps}{nw}"
@@ -133,14 +119,11 @@ label start:
         s "\"Well, [mcname], enjoy your stay.\""
         show silas default closed
         "You let out a small smile before heading off on your way to The Wrangler Inn. Silas disappears in the opposite direction."
-        stop music
         hide silas default closed with easeoutleft
         "{i}What a strange encounter... That Silas... He seemed angry with me, yet caring at the same time?{/i}"
         "{i}This road seems awfully lonely. I sure hope he gave me the correct directions! Maybe the inn is just in an isolated area?... I really hope that is the case.{/i}"
 
         scene bg zephyr house outside with fade
-        play music "audio/General Night.wav"
-
         "Narrator" "After walking a bit further, you see the end of the road without an inn accompanying it. You look around in a slight panic and only find the entrance to a farm up ahead."
         mc "\"Are you serious!? He really gave me the wrong directions? Is this some sort of prank, or does he really not know the way around his town!?\""
         mc "\"I have been walking for so long... By the time I walk back into town, the sun will set, and I will practically be stranded in the streets!\""
@@ -149,11 +132,7 @@ label start:
         "Narrator" "You take your luggage and push open the gate to the farm. Herds of cattle and plentiful crops are seen on either side of you as you get closer and closer towards the door of the farmhouse."
         "Narrator" "You place three knocks on the door and wait for a few seconds before the door swings open. A puzzled man makes eye contact with you before greeting you with a smile."
         
-        stop music
-
         show zephyr default open with dissolve
-
-        play music "audio/Romantic.wav"
 
         "???" "\"Howdy! My name is Zephyr. You don't seem to be from 'round these parts. What can I call you, dear?\""
 
@@ -205,8 +184,7 @@ label start:
 
         "Narrator" "Zephyr steps aside to let you in. His home is decorated with colorful, cozy furniture. Warm lighting surrounds you as you walk down the main hallway of the house and find your way to the guest bedroom."
 
-        stop music 
-        scene bg zephyrs kitchen night with fade
+        scene bg black with fade
         "Narrator" "You let out a deep breath as your tense muscles finally relax."
 
         mc "I guess this is my room for the night. I shouldn’t unpack too much, only the necessities."
@@ -216,7 +194,6 @@ label start:
         mc "\"Come in!\""
 
         show zephyr default open with dissolve
-        play music "audio/General Day.wav"
         "Narrator" "Zephyr enters the room holding a glass of warm milk and a soft, star-shaped pastry."
 
         z "\"I’m not sure if you have eaten yet, and I didn’t want to prepare a large meal for you since you need to rest up. I figured this would hold you ‘til the morning.\""
@@ -239,7 +216,6 @@ label start:
         z "\"Okay, got it. Sleep well, dear.\""
 
         hide zephyr with dissolve
-        stop music
 
         "Narrator" "You take some time to enjoy your pastry and milk while scrolling through news about the spaceship crash on Rurigena Terra. After finishing your small meal, you turn off the light and slowly drift into a deep slumber."
 
@@ -348,7 +324,6 @@ label start:
         "Narrator" "You grab a small bag to take any necessary belongings with you before heading out to town."
 
         scene bg street day with fade
-        play music "audio/General Day.wav"
 
         "Narrator" "You stroll at a leisurely pace throughout the streets."
         mc "\"The town looks so beautiful now that I am not rushing around. I can actually take in the scenery and visit the businesses here.\""
@@ -356,9 +331,7 @@ label start:
         mc "\"I don’t think I’ve seen a saloon in a while… or at all! I can’t believe they have one here.\"" 
         "Narrator" "You head towards the saloon and walk inside."
 
-        stop music
         scene bg saloon with fade
-        play music "audio/Saloon.wav"
 
         "Narrator" "You take in the interior of the saloon. The lighting is dim and cozy, and many people are seen chatting and drinking at various tables inside." 
         "Narrator" "Your gaze finds its way to the bar stand and onto a familiar figure. You chuckle to yourself before getting closer to the man that caught your eye for the second time on this planet." 
@@ -413,8 +386,6 @@ label start:
         "Narrator" "You get a warm feeling in your chest at the thought of exploring around town with Silas."
         mc "\"Yeah! I would love to do that!\""
 
-        stop music
-
         scene bg street night with fade
 
         show silas happy closed
@@ -466,7 +437,12 @@ label start:
         mc "\"This is delicious, Zephyr! Thank you for making enough for all of us.\""
 
         show zephyr flustered open at right
-        z "\"Course, darlin! Anything for you.\""
+        z "\"Course, darlin! Anything for {b}you{/b}.\""
+
+        show zephyr angry open at right
+        z "\"Though I wasn’t expectin’ extra company tonight.\""
+
+        show silas angry open at left with hpunch
 
     
 
@@ -571,4 +547,3 @@ label start:
         return
 
     return
-
