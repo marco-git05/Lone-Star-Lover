@@ -18,13 +18,16 @@ image bg generic space = "backrounds/bg_generic_space.png"
 image bg inside ship = "backrounds/bg_inside_ship.png"
 image bg space station = "backrounds/bg_space_station.png"
 image bg zephyr house outside = "backrounds/bg_zypher_house_outside.png"
+image bg saloon = "backrounds/bg_saloon.png"
+image bg street night = "backrounds/bg_street_night.png"
+image bg street day = "backrounds/bg_street_day.png"
 
 # The game starts here.
 
 label start:
 
     label day_1:
-        scene bg generic space with fade
+        scene bg space station with fade
 
         "{i}Gate A-11... Gate A-11... Ah! I see it now. Finally, I can have some peace far, far away from my office of misery.{/i}"
         "Narrator" "You let out a long yawn."
@@ -55,7 +58,7 @@ label start:
 
         "{i}Oh my... I should've expected to run into a stressful situation while going on vacation. God forbid I try to relax!{/i}"
         "Narrator" "You continue pushing through luggage before pulling the suitcase with your name out of the large pile."
-        $ mcname = renpy.input("\"What is your name?\"", length = 32)
+        $ mcname = renpy.input("What is your name?", length = 32)
         mc "\"Ugh! When did this thing get so heavy?\""
         "{i}I don't even know where I am or where I could stay!{/i}"
         "Narrator" "You clasp your hands over your face and take a deep breath in an attempt to calm down." 
@@ -68,7 +71,7 @@ label start:
         "Woman" "\"Shhh! Lower your voice, other people might hear us! Just lead the way, there's no need to go over the directions right this second.\"" with vpunch
         "{i}Does it really only take three streets to get to {b}The Wrangler Inn{/b}? I do not know the last street, but maybe I can figure it out along the way. I should start leaving before anyone else does!{/i}"
 
-        scene bg town day with fade
+        scene bg street day with fade
 
         "Narrator" "You take your luggage and quickly walk away from the ship, keeping the street names in your mind. You find {b}Calico Street{/b} and hurry down the road as you start to run out of breath from the long walk."
         "Narrator" "Soon enough, you spot a sign on your left labeled {b}\"Blossom St.\"{/b}"
@@ -90,10 +93,11 @@ label start:
         "???" "\"You should at least have some sense in you to look where you are going.\""
 
         menu:
-            "Huh? But I was looking where I was going...":
+            "???" "{cps=5000}\"You should at least have some sense in you to look where you are going.\"{/cps}"
+            "\"Huh? But I was looking where I was going...\"":
                 pass
-            "...Can you at least help me figure out where to go from here?":
-                $ s_affection += 1
+            "\"...Can you at least help me figure out where to go from here?\"":
+                pass
         
         "???" "\"Where are you heading?\""
         show silas angry closed
@@ -117,23 +121,24 @@ label start:
 
         scene bg zephyr house outside with fade
         "Narrator" "After walking a bit further, you see the end of the road without an inn accompanying it. You look around in a slight panic and only find the entrance to a farm up ahead."
-        mc "Are you serious!? He really gave me the wrong directions? Is this some sort of prank, or does he really not know the way around his town!?"
-        mc "I have been walking for so long… By the time I walk back into town, the sun will set, and I will practically be stranded in the streets!"
-        "Narrator" "You take a moment to collect your thoughts after expressing your worries about your current situation."
-        mc "Well, someone has to be taking care of that farm… right? I really hope the farm owner is home or I will be doomed for tonight."
+        mc "\"Are you serious!? He really gave me the wrong directions? Is this some sort of prank, or does he really not know the way around his town!?\""
+        mc "\"I have been walking for so long... By the time I walk back into town, the sun will set, and I will practically be stranded in the streets!\""
+        "Narrator" "You take a moment to collect your thoughts and figure out what to do now."
+        "{i}Well, someone has to be taking care of that farm... right? I really hope the farm owner is home or I will be doomed for tonight.{/i}"
         "Narrator" "You take your luggage and push open the gate to the farm. Herds of cattle and plentiful crops are seen on either side of you as you get closer and closer towards the door of the farmhouse."
         "Narrator" "You place three knocks on the door and wait for a few seconds before the door swings open. A puzzled man makes eye contact with you before greeting you with a smile."
         
         show zephyr default open with dissolve
-        
-        "???" "\"Howdy! My name is Zephyr. You don’t seem to be from ‘round these parts. What can I call you, dear?\""
+
+        "???" "\"Howdy! My name is Zephyr. You don't seem to be from 'round these parts. What can I call you, dear?\""
 
         show zephyr default closed
 
         menu:
-            "Uhm … Hello? My name is [mcname].":
+            "???" "{cps=5000}\"Howdy! My name is Zephyr. You don't seem to be from 'round these parts. What can I call you, dear?\"{/cps}"
+            "\"Uhm... Hello? My name is [mcname].\"":
                 pass
-            "Oh, howdy! My name is [mcname]!":
+            "\"Oh, howdy! My name is [mcname]!\"":
                 pass
 
         show zephyr default open
@@ -150,26 +155,27 @@ label start:
         show zephyr angry closed
         "Narrator" "Zephyr grimaces a little at the mention of the inn."
         show zephyr default open
-        z "\"That place is further in town… and it costs a pretty penny.\""
+        z "\"That place is further in town... and it costs a pretty penny.\""
 
         show zephyr default closed
         menu:
-            "Well, it doesn’t matter the cost, it’s all I have.":
+            z "{cps=5000}\"That place is further in town... and it costs a pretty penny.\"{/cps}"
+            "\"Well, it doesn't matter the cost, it's all I have.\"":
                 pass
-            "Oh no … Do you have any other recommendations for where to stay?":
+            "\"Oh no.... Do you have any other recommendations for where to stay?\"":
                 pass
 
         show zephyr default open
         z "\"Lucky for you, I have a guest room I can offer to you for the duration of your stay.\""
         show zephyr happy open
-        z "\"It’s free of charge! Knowing that you are somewhere safe for the night is enough for me.\""
+        z "\"It's free of charge! Knowing that you are somewhere safe for the night is enough for me.\""
 
 
         show zephyr happy closed
         menu:
-            "Oh… Well, thank you! I’ll stay for tonight and be up and out of your way tomorrow night then.":
+            "Oh... Well, thank you! I'll stay for tonight and be up and out of your way tomorrow night then.":
                 pass
-            "Thank you so, so much! I’m glad I won’t have to walk in the streets after dark.":
+            "Thank you so, so much! I'm glad I won't have to walk in the streets after dark.":
                 pass
 
         "Narrator" "Zephyr steps aside to let you in. His home is decorated with colorful, cozy furniture. Warm lighting surrounds you as you walk down the main hallway of the house and find your way to the guest bedroom."
@@ -197,9 +203,9 @@ label start:
         show zephyr happy closed
         menu:
             "Sunny side up.":
-                $ z_eggs = "sunny"
+                pass
             "Scrambled.":
-                $ z_eggs = "scrambled"
+                pass
 
         show zephyr default open
         z "\"Okay, got it. Sleep well, dear.\""
@@ -211,6 +217,159 @@ label start:
         scene bg black with fade
         pause(2.0)
 
+        # END DAY 1
+
+    label day_2:
+        "Narrator" "Warm sunlight fills your room as you wake up. Your eyes softly flutter open to find something yellow stuck to your forehead."
+        "Narrator" "You gently remove it — it's a note that reads: {b}\"Good mornin’ darlin'! Breakfast is waiting for you in the kitchen. - Zephyr\"{/b}"
+        "Narrator" "You smile before stretching and getting out of bed."
+
+
+        scene bg zephyr house outside with fade
+        "Narrator" "As you follow the scent into the kitchen, Zephyr is seen plating two meals."
+
+
+        show zephyr default open with dissolve
+        z "\"Mornin’, [mcname]! I made you some eggs, toast, and sausage to start the day. Come sit and eat up! Oh, here’s a glass of juice, too.\""
+
+        "Narrator" "He sets your plate and a shimmering pink drink in front of you."
+
+        z "\"Now, I reckon this drink is unfamiliar to you. Don’t be afraid of it; it’s made from fresh fruits from my garden! It’s full of vitamins, so it’s real good for you!\""
+
+        "Narrator" "You smile at him before observing the drink. The juice smells slightly sweet as you put the rim of the cup to your lips and take a sip."
+        "Narrator" "Zephyr watches you, fidgeting with his thumbs, while you take in the floral and fruity flavor of the drink."
+
+        z "So… What do you think?"
+
+        menu:
+            "I’m not sure if this is my taste…":
+                $ z_affection -= 1
+                show zephyr angry closed
+                z "\"Oh! I’m sorry. I do own fruits from other planets, but I figured it’d be nice to show you something from here.\""
+                show zephyr default open
+                z "\"Here, have some water instead.\""
+            "It’s unique, but it reminds me of home.":
+                $ z_affection += 1
+                show zephyr happy open
+                z "\"Oh, really? That reminds me — I’ve been wondering about where you're from.\""
+
+
+        mc "\"I come from Earth.\""
+
+        show zephyr default open
+        z "\"Well, I’ll be! We rarely get Earth folk ‘round here nowadays.\""
+
+
+        mc "\"Oh? Why is that?\""
+
+
+        show zephyr default closed
+        z "\"They just don’t appreciate our lifestyle. Our days move quicker here, but our hearts don’t. We don’t rush life. The planet gives us all we need — so we live slow and live well.\""
+
+        mc "\"Wow… what a shock. Most of my life is practically given to a large screen, so it’s kind of surprising to hear your take on technology.\""
+
+
+        z "\"Hmm, I see. So what do you do on Earth?\""
+
+
+        mc "\"I mainly work on a communications team for a large business. The pay is great, but the work can be insanely boring most of the time.\""
+        mc "\"It’s the reason I took this trip, actually. I thought I’d have a chance to relax and enjoy a beachy scenery, it's what Caeles Terra is known for anyway.\""
+        mc "\"But I guess the universe didn’t want me to have that just yet. Instead, I get to be stuck here.\""
+
+        "Narrator" "You notice that your mood has fallen flat, and you think Zephyr noticed too, since he stares at you with worry in his eyes. You quickly fix your posture and give a small smile."
+
+        menu:
+            "\"Although it isn’t too bad here, a vacation is still a vacation!\"":
+                pass
+            "\"I don’t mind being here, though. After all, I got to meet you and stay at your lovely farm.\"":
+                $ z_affection += 1
+
+
+        show zephyr happy open
+        z "\"I’m glad you are enjoying it here, then. Have you had a chance to explore the town a bit?\""
+
+
+        mc "\"Not really, I was mainly rushing to find the inn. I didn’t get a chance to visit any shops or restaurants.\""
+
+        z "\"Well, I think you should take some time to enjoy the town before your flight is ready. Please be back before sunset, though.\""
+
+        hide zephyr with dissolve
+
+
+        "Narrator" "You nod in acknowledgement before finishing up your meal. After you are done eating, you head back to your room to get ready for the day."
+
+        scene bg black with fade
+
+        "Narrator" "You open your phone."
+        mc "\"Wow, there are still no updates on the ship. It’s all the same information repeated over and over and over. Maybe I should listen to Zephyr and go out to explore the town.\""
+        "Narrator" "You grab a small bag to take any necessary belongings with you before heading out to town."
+
+        scene bg street day with fade
+
+        "Narrator" "You stroll at a leisurely pace throughout the streets."
+        mc "\"The town looks so beautiful now that I am not rushing around. I can actually take in the scenery and visit the businesses here.\""
+        "Narrator" "One building catches your eye by surprise. The sign reads “Prickly Pear Saloon.”" 
+        mc "\"I don’t think I’ve seen a saloon in a while… or at all! I can’t believe they have one here.\"" 
+        "Narrator" "You head towards the saloon and walk inside."
+
+        scene bg saloon with fade
+
+        "Narrator" "You take in the interior of the saloon. The lighting is dim and cozy, and many people are seen chatting and drinking at various tables inside." 
+        "Narrator" "Your gaze finds its way to the bar stand and onto a familiar figure. You chuckle to yourself before getting closer to the man that caught your eye for the second time on this planet." 
+        mc "“Silas?”"
+
+        show silas default open with dissolve
+        "Narrator" "He takes a sip of his drink before turning around to face you."
+
+        menu:
+            "“Hey Silas! What are you doing here?”":
+                mc "\"Hey Silas! What are you doing here?\""
+                show silas default closed
+                s "\"Just here to cool down from the day. Why are you here?\""
+                mc "\"Uhm, well, I was just looking around the town, and I just wanted to take a look at this saloon before I head back to my place of stay before sundown.\""
+
+            "“Thanks Silas… I really appreciated your directions…”":
+                mc "\"Thanks Silas… I really appreciated your directions…\""
+                show silas default open
+                s "\"Oh? Well… you're welcome.\""
+
+        show silas default open
+        s "\"Oh, did you not stay at the Wrangler Inn last night?\""
+        mc "\"Uh, well I was able to find a very nice farm where I could stay for the night actually, no thanks to you.\""
+        show silas angry closed
+        s "\"Whatever. At least I am glad you found somewhere to stay.\""
+
+        show silas sad closed
+        s "\"Sorry, I did not mean to sound rude, but do you want to have some fun? We can play darts.\""
+        mc "\"Um, sure, I would love to play some games!\""
+
+    
+        "Narrator" "They both start playing darts for a bit. Silas is letting the MC win"
+
+        show silas default open
+        s "\"Holy cow, how are you so good at darts?\""
+        mc "\"Back on Earth I played darts with my friends, and I would always beat them when they would say they were better than me.\""
+        show silas default closed
+        s "\"Well, let’s finish up this game with the final dart in my hand, with my eyes closed.\""
+        "Narrator" "throws dart"
+        show silas flustered open
+        "Narrator" "[mcname] starts laughing at his mistake. Silas gets flustered from his horrible miss."
+        "Narrator" "[mcname] goes to pick up the dart that Silas had missed from his final shot. And tries to return the dart to Silas."
+
+        show silas default open
+        s "\"You can keep the dart as a trophy of your win in beating me at darts.\""
+        mc "\"Well, thank you for this trophy, I will cherish this memory with it.\""
+        show silas default closed
+        s "\"Hey, now that we're done with darts, do you want to go and have some more fun in exploring the town\""
+        "Narrator" "[mcname] gets flustered from Silas’s invitation to explore the town with him for her to explore."
+        mc "\"Yeah! I would love to do that!\""
+
+        scene bg street night with fade
+
+        show silas default open
+        "Narrator" "As Silas and the MC are exploring the town, Silas slowly warms up to MC throughout the exploration."
+
+        s "\"That was really fun, I am glad that I was able to show you the town before you continue on your way.\""
 
 
     return
